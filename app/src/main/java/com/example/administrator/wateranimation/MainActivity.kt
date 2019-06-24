@@ -10,8 +10,12 @@ class MainActivity : AppCompatActivity() {
         // 旋转聚合 水波纹 交互 动画
 //        setContentView(R.layout.activity_main)
 
+         //Canvas 常用Api
+//        setContentView(CanvasApi(this))
 
+         //Canvas save restore 等操作
+//        setContentView(SaveRetoreView(this))
+        setContentView(IonExplosionView(this))
 
-        setContentView(CanvasApi(this))
     }
 }

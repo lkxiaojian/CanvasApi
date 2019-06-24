@@ -97,7 +97,7 @@ class CustomWaterAtView : View {
     inner class RotateState : Splash() {
         init {
             //旋转一周
-            mAnimator = ValueAnimator.ofFloat(0f, (Math.PI * 2).toFloat())
+            mAnimator = ValueAnimator.ofFloat(0f, (Math.PI*1.5 ).toFloat())
             //执行两边
             mAnimator?.repeatCount = 2
             //动画时长

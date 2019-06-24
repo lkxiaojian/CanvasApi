@@ -3,6 +3,7 @@ package com.example.administrator.wateranimation
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
+import android.graphics.Matrix
 import android.graphics.Paint
 import android.view.View
 
@@ -68,12 +69,22 @@ class CanvasApi : View {
 
 
         //倾斜操作
-        canvas.drawRect(0f, 0f, 400f, 400f, mPaint)
-//        canvas.skew(1, 0); //在X方向倾斜45度,Y轴逆时针旋转45
-        canvas.skew(0f, 2f) //在y方向倾斜45度， X轴顺时针旋转45
-        mPaint?.color = Color.GRAY
-        canvas.drawRect(0f, 0f, 400f, 400f, mPaint)
+//        canvas.drawRect(0f, 0f, 400f, 400f, mPaint)
+////        canvas.skew(1, 0); //在X方向倾斜45度,Y轴逆时针旋转45
+//        canvas.skew(0f, 2f) //在y方向倾斜45度， X轴顺时针旋转45
+//        mPaint?.color = Color.GRAY
+//        canvas.drawRect(0f, 0f, 400f, 400f, mPaint)
 
+
+        //矩阵
+        canvas.drawRect(0f, 0f, 200f, 200f, mPaint)
+        var matrix = Matrix()
+//        matrix.setTranslate(50f, 50f)
+//        matrix.setRotate(45f)
+        matrix.setScale(0.5f, 0.5f)
+        canvas.matrix = matrix
+        mPaint?.color = Color.GRAY
+        canvas.drawRect(0f, 0f, 200f, 200f, mPaint)
 
     }
 }
